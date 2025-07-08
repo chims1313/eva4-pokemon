@@ -1,0 +1,149 @@
+/* === Fondo general === */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #111; /* Si la imagen no carga, el fondo será negro */
+  background-image: url('/umbreon-bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  font-family: 'Comic Sans MS', 'Arial', sans-serif;
+  color: #222;
+}
+
+/* === Títulos === */
+h1, .titulo-principal {
+  color: #fff;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-size: 2.2rem;
+  text-shadow: 2px 2px 8px #000;
+}
+
+h2 {
+  color: #111;
+  text-shadow: 2px 2px 4px #ff6b00;
+  margin-bottom: 25px;
+  font-size: 2rem;
+  border: 4px solid #ff6b00;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 10px 20px;
+  display: inline-block;
+}
+
+/* === Contenedor principal === */
+.pokemon-container {
+  max-width: 95%;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.92);
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+
+/* === Controles (selectores) === */
+.buscador {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.buscador label {
+  color: #111;
+  font-weight: bold;
+  font-size: 1.1em;
+  text-shadow: 1px 1px #fff;
+}
+
+.buscador select {
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: 2px solid #000000;
+  background-color: #fff;
+  font-size: 1em;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.3s;
+}
+
+.buscador select:hover {
+  border-color: #000000;
+}
+
+/* === Lista de tarjetas === */
+.pokemon-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 20px;
+}
+
+/* === Tarjeta individual === */
+.pokemon-card {
+  background-color: #fff;
+  border: 3px solid #111; /* Negro */
+  border-radius: 15px;
+  padding: 20px;
+  width: 180px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease-in-out;
+  text-align: center;
+}
+
+.pokemon-card:hover {
+  transform: scale(1.05);
+}
+
+/* === Nombre del Pokémon === */
+.pokemon-card h3 {
+  color: #000000; 
+  font-size: 1.4em;
+  margin: 0 0 10px;
+  text-shadow: 1px 1px #fff;
+}
+
+/* === Imagen del Pokémon === */
+.pokemon-card img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+/* === Tipos del Pokémon === */
+.pokemon-card p {
+  font-size: 1em;
+  color: #333;
+}
+
+.pokemon-card p strong {
+  color: #000;
+}
+
+/* === Estados de carga y error === */
+.cargando {
+  color: #222;
+  background-color: #ffcc80;
+  padding: 15px;
+  border-radius: 10px;
+  font-weight: bold;
+  margin-top: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.error {
+  color: #fff;
+  background-color: #d9534f;
+  padding: 15px;
+  border-radius: 10px;
+  font-weight: bold;
+  margin-top: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
